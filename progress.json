@@ -1,0 +1,162 @@
+{
+ "patch": "16.19",
+ "generated": "2026-09-26 17:07 UTC",
+ "generated_ts": 1790442432,
+ "regions": [
+  {
+   "platform": "kr",
+   "name": "Korea",
+   "collected": 19665,
+   "downloaded": 25475,
+   "estimated": 263621,
+   "share": 0.07459729088113037,
+   "games_per_hour": 3726,
+   "since": "2026-09-23 18:22 UTC"
+  },
+  {
+   "platform": "euw1",
+   "name": "EU West",
+   "collected": 12640,
+   "downloaded": 17018,
+   "estimated": 266259,
+   "share": 0.04747262313442845,
+   "games_per_hour": 3765,
+   "since": "2026-09-23 18:23 UTC"
+  },
+  {
+   "platform": "eun1",
+   "name": "EU Nordic & East",
+   "collected": 4164,
+   "downloaded": 4276,
+   "estimated": 160620,
+   "share": 0.025923955275341908,
+   "games_per_hour": 2274,
+   "since": "2026-09-23 18:29 UTC"
+  },
+  {
+   "platform": "vn2",
+   "name": "Vietnam",
+   "collected": 4822,
+   "downloaded": 5358,
+   "estimated": 114307,
+   "share": 0.04218117147223449,
+   "games_per_hour": 1618,
+   "since": "2026-09-23 18:27 UTC"
+  },
+  {
+   "platform": "tr1",
+   "name": "Turkey",
+   "collected": 4259,
+   "downloaded": 4275,
+   "estimated": 61237,
+   "share": 0.06954903629946765,
+   "games_per_hour": 865,
+   "since": "2026-09-23 18:21 UTC"
+  },
+  {
+   "platform": "br1",
+   "name": "Brazil",
+   "collected": 5150,
+   "downloaded": 5163,
+   "estimated": 46466,
+   "share": 0.11082721133868978,
+   "games_per_hour": 658,
+   "since": "2026-09-23 18:28 UTC"
+  },
+  {
+   "platform": "na1",
+   "name": "North America",
+   "collected": 5329,
+   "downloaded": 5554,
+   "estimated": 45644,
+   "share": 0.11675388249564236,
+   "games_per_hour": 646,
+   "since": "2026-09-23 18:28 UTC"
+  },
+  {
+   "platform": "la1",
+   "name": "Latin America North",
+   "collected": 5125,
+   "downloaded": 5132,
+   "estimated": 44493,
+   "share": 0.115181479485649,
+   "games_per_hour": 629,
+   "since": "2026-09-23 18:24 UTC"
+  },
+  {
+   "platform": "ru",
+   "name": "Russia",
+   "collected": 3782,
+   "downloaded": 3944,
+   "estimated": 36459,
+   "share": 0.1037265365909269,
+   "games_per_hour": 516,
+   "since": "2026-09-23 18:27 UTC"
+  },
+  {
+   "platform": "la2",
+   "name": "Latin America South",
+   "collected": 5233,
+   "downloaded": 5252,
+   "estimated": 31531,
+   "share": 0.16597166351027465,
+   "games_per_hour": 445,
+   "since": "2026-09-23 18:17 UTC"
+  },
+  {
+   "platform": "jp1",
+   "name": "Japan",
+   "collected": 7754,
+   "downloaded": 7957,
+   "estimated": 29138,
+   "share": 0.26612320326944344,
+   "games_per_hour": 411,
+   "since": "2026-09-23 18:09 UTC"
+  },
+  {
+   "platform": "sg2",
+   "name": "Southeast Asia",
+   "collected": 4810,
+   "downloaded": 4885,
+   "estimated": 28146,
+   "share": 0.17089037184757677,
+   "games_per_hour": 397,
+   "since": "2026-09-23 18:15 UTC"
+  },
+  {
+   "platform": "oc1",
+   "name": "Oceania",
+   "collected": 5123,
+   "downloaded": 5266,
+   "estimated": 20226,
+   "share": 0.2532975606574614,
+   "games_per_hour": 286,
+   "since": "2026-09-23 18:23 UTC"
+  },
+  {
+   "platform": "tw2",
+   "name": "Taiwan",
+   "collected": 5069,
+   "downloaded": 5263,
+   "estimated": 17257,
+   "share": 0.2937646637146502,
+   "games_per_hour": 244,
+   "since": "2026-09-23 18:16 UTC"
+  },
+  {
+   "platform": "me1",
+   "name": "Middle East",
+   "collected": 3270,
+   "downloaded": 3692,
+   "estimated": 1330,
+   "share": 1.0,
+   "games_per_hour": 19,
+   "since": "2026-09-23 18:21 UTC"
+  }
+ ],
+ "total": {
+  "collected": 96195,
+  "estimated": 1166734,
+  "share": 0.0824480987097316
+ }
+}

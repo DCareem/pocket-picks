@@ -22,6 +22,10 @@ dt{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.04
 th,td{text-align:left;padding:8px;border-bottom:1px solid var(--line);white-space:nowrap}th{color:var(--muted);font-weight:500}
 .method{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:4px 18px;margin-top:16px}
   .note{background:var(--panel);border:1px solid var(--accent);border-radius:8px;padding:10px 14px;margin-top:18px}
+.progress .prog{margin-top:12px}.prog-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:14px}
+.prog-num{color:var(--muted);font-variant-numeric:tabular-nums}.prog-track{height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin-top:4px}
+.prog-fill{height:100%;background:var(--accent);border-radius:99px;transition:width .6s}.prog.big .prog-track{height:14px}.prog.big .prog-head{font-size:16px;font-weight:600}
+details{margin-top:14px}summary{cursor:pointer;color:var(--muted)}.prog-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:4px 24px}
 footer{margin-top:48px;font-size:12px;color:var(--muted)}
 @media (max-width:420px){dl{grid-template-columns:repeat(2,1fr)}}
 </style></head><body><main>
@@ -31,6 +35,64 @@ footer{margin-top:48px;font-size:12px;color:var(--muted)}
 <span>Regions: KR</span><span>Updated 2026-09-26 16:47 UTC</span></div>
 
 <p class="note">Early data: 18,797 Korean games so far. Rare picks need about 20,000 before most of them can clear the bar, so this list will grow over the next day.</p>
+
+<section class="progress" id="progress">
+<h2>Data collected this patch</h2>
+<p class="muted">Plat+ games in our data against an estimate of all Plat+ games played on each server since patch 16.19 went live. Riot does not publish game counts; the estimate comes from how fast sampled ladder players' game counts rise. <span id="prog-updated">Updated 2026-09-26 17:07 UTC</span>.</p>
+<div class="prog big" data-platform="kr">
+<div class="prog-head"><span>Korea</span><span class="prog-num">19,665 of ≈263,621 games (7.5%)</span></div>
+<div class="prog-track"><div class="prog-fill" style="width:7.5%"></div></div></div>
+<details><summary>All regions: 96,195 of ≈1,166,734 games</summary>
+<div class="prog-list"><div class="prog" data-platform="euw1">
+<div class="prog-head"><span>EU West</span><span class="prog-num">12,640 of ≈266,259 games (4.7%)</span></div>
+<div class="prog-track"><div class="prog-fill" style="width:4.7%"></div></div></div><div class="prog" data-platform="eun1">
+<div class="prog-head"><span>EU Nordic &amp; East</span><span class="prog-num">4,164 of ≈160,620 games (2.6%)</span></div>
+<div class="prog-track"><div class="prog-fill" style="width:2.6%"></div></div></div><div class="prog" data-platform="vn2">
+<div class="prog-head"><span>Vietnam</span><span class="prog-num">4,822 of ≈114,307 games (4.2%)</span></div>
+<div class="prog-track"><div class="prog-fill" style="width:4.2%"></div></div></div><div class="prog" data-platform="tr1">
+<div class="prog-head"><span>Turkey</span><span class="prog-num">4,259 of ≈61,237 games (7.0%)</span></div>
+<div class="prog-track"><div class="prog-fill" style="width:7.0%"></div></div></div><div class="prog" data-platform="br1">
+<div class="prog-head"><span>Brazil</span><span class="prog-num">5,150 of ≈46,466 games (11.1%)</span></div>
+<div class="prog-track"><div class="prog-fill" style="width:11.1%"></div></div></div><div class="prog" data-platform="na1">
+<div class="prog-head"><span>North America</span><span class="prog-num">5,329 of ≈45,644 games (11.7%)</span></div>
+<div class="prog-track"><div class="prog-fill" style="width:11.7%"></div></div></div><div class="prog" data-platform="la1">
+<div class="prog-head"><span>Latin America North</span><span class="prog-num">5,125 of ≈44,493 games (11.5%)</span></div>
+<div class="prog-track"><div class="prog-fill" style="width:11.5%"></div></div></div><div class="prog" data-platform="ru">
+<div class="prog-head"><span>Russia</span><span class="prog-num">3,782 of ≈36,459 games (10.4%)</span></div>
+<div class="prog-track"><div class="prog-fill" style="width:10.4%"></div></div></div><div class="prog" data-platform="la2">
+<div class="prog-head"><span>Latin America South</span><span class="prog-num">5,233 of ≈31,531 games (16.6%)</span></div>
+<div class="prog-track"><div class="prog-fill" style="width:16.6%"></div></div></div><div class="prog" data-platform="jp1">
+<div class="prog-head"><span>Japan</span><span class="prog-num">7,754 of ≈29,138 games (26.6%)</span></div>
+<div class="prog-track"><div class="prog-fill" style="width:26.6%"></div></div></div><div class="prog" data-platform="sg2">
+<div class="prog-head"><span>Southeast Asia</span><span class="prog-num">4,810 of ≈28,146 games (17.1%)</span></div>
+<div class="prog-track"><div class="prog-fill" style="width:17.1%"></div></div></div><div class="prog" data-platform="oc1">
+<div class="prog-head"><span>Oceania</span><span class="prog-num">5,123 of ≈20,226 games (25.3%)</span></div>
+<div class="prog-track"><div class="prog-fill" style="width:25.3%"></div></div></div><div class="prog" data-platform="tw2">
+<div class="prog-head"><span>Taiwan</span><span class="prog-num">5,069 of ≈17,257 games (29.4%)</span></div>
+<div class="prog-track"><div class="prog-fill" style="width:29.4%"></div></div></div><div class="prog" data-platform="me1">
+<div class="prog-head"><span>Middle East</span><span class="prog-num">3,270 of ≈1,330 games (100.0%)</span></div>
+<div class="prog-track"><div class="prog-fill" style="width:100.0%"></div></div></div></div></details>
+</section>
+<script>
+(function () {
+  function fmt(n) { return n.toLocaleString('en-US'); }
+  function update() {
+    fetch('progress.json?' + Date.now()).then(function (r) { return r.json(); }).then(function (pr) {
+      pr.regions.forEach(function (r) {
+        var el = document.querySelector('.prog[data-platform="' + r.platform + '"]');
+        if (!el) return;
+        var share = r.share || 0;
+        el.querySelector('.prog-num').textContent = fmt(r.collected) + ' of ' +
+          (r.estimated ? '\u2248' + fmt(r.estimated) : 'not measured yet') + ' games (' + (share * 100).toFixed(1) + '%)';
+        el.querySelector('.prog-fill').style.width = Math.min(100, share * 100).toFixed(1) + '%';
+      });
+      var u = document.getElementById('prog-updated');
+      if (u) u.textContent = 'Updated ' + pr.generated;
+    }).catch(function () {});
+  }
+  setInterval(update, 60000);
+})();
+</script>
 
 <h2>Off-role picks</h2>
 <p class="muted">Champions winning in a role that is not one of their established positions. "At least" is the win rate we are 90% sure it beats, given how few games there are; it is above 50% for everything here.</p>
