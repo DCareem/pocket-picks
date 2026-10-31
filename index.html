@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Pocket Picks · Off-Meta LoL Picks (Patch 16.19, Beta)</title>
+<title>loloffmeta · Off-Meta LoL Picks (Patch 16.19, Beta)</title>
 <meta name="description" content="Rare champion, role, item and keystone picks that are winning, with the games and win rates behind every one. Beta signup for full builds and per-player stats.">
 <link rel="canonical" href="https://dcareem.github.io/pocket-picks/">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Pocket Picks">
-<meta property="og:title" content="Pocket Picks · Off-Meta LoL Picks (Patch 16.19, Beta)">
+<meta property="og:site_name" content="loloffmeta">
+<meta property="og:title" content="loloffmeta · Off-Meta LoL Picks (Patch 16.19, Beta)">
 <meta property="og:description" content="Rare champion, role, item and keystone picks that are winning, with the games and win rates behind every one. Beta signup for full builds and per-player stats.">
 <meta property="og:url" content="https://dcareem.github.io/pocket-picks/">
 <meta property="og:image" content="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yorick_0.jpg">
@@ -58,9 +58,11 @@ section[id],h2[id]{scroll-margin-top:74px}
 .top{position:sticky;top:0;z-index:40;background:rgba(1,10,19,.9);backdrop-filter:blur(14px);border-bottom:1px solid rgba(200,170,110,.28)}
 .top::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.55}
 .top .inner{max-width:1140px;margin:auto;padding:10px 20px;display:flex;align-items:center;gap:20px}
-.brand{display:flex;align-items:center;gap:11px;white-space:nowrap;font:400 17px/1 'Marcellus',Georgia,serif;letter-spacing:.17em;text-transform:uppercase;color:var(--gold-bright)}
+.brand{display:flex;align-items:center;gap:11px;white-space:nowrap;color:var(--gold-bright)}
 .brand:hover{text-decoration:none}
-.brand em{font-style:normal;color:var(--gold)}
+.wm{display:block;flex:none;height:20px;width:auto;transition:filter .22s ease}
+.brand:hover .wm{filter:drop-shadow(0 0 9px rgba(200,170,110,.32))}
+.wm-defs{position:absolute;width:0;height:0;overflow:hidden}
 .beta{display:inline-flex;align-items:center;padding:2px 6px;border:1px solid rgba(10,200,185,.5);background:rgba(10,200,185,.08);color:var(--teal);font:700 9px/1 'Inter',sans-serif;letter-spacing:.14em;text-transform:uppercase;vertical-align:middle}
 .logo{width:34px;height:34px;flex:none;display:block;transition:transform .22s ease,filter .22s ease}
 .brand:hover .logo{transform:scale(1.06);filter:drop-shadow(0 0 8px rgba(200,170,110,.45))}
@@ -180,9 +182,11 @@ html.js .pick-filter{display:flex}
 .pf-more{display:block;margin:20px auto 0;height:40px;padding:0 22px;border:1px solid rgba(200,170,110,.45);background:rgba(1,10,19,.6);color:var(--gold-bright);font:400 14px 'Marcellus',Georgia,serif;letter-spacing:.05em;cursor:pointer;transition:background .18s ease,border-color .18s ease}
 .pf-more:hover{background:rgba(200,170,110,.12);border-color:rgba(200,170,110,.8)}
 
-.pf-luck{display:inline-flex;align-items:center;gap:7px;height:38px;padding:0 13px;border:1px solid rgba(200,170,110,.45);background:linear-gradient(180deg,rgba(200,170,110,.14),rgba(200,170,110,.04));color:var(--gold-bright);font:400 14px/1 'Marcellus',Georgia,serif;letter-spacing:.04em;white-space:nowrap;cursor:pointer;transition:border-color .16s ease,background .16s ease,color .16s ease}
-.pf-luck:hover{border-color:var(--gold);background:rgba(200,170,110,.18)}
-.pf-luck[aria-expanded="true"]{border-color:rgba(10,200,185,.55);color:var(--teal);background:rgba(10,200,185,.08)}
+.pf-luck{display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 16px;border:1px solid rgba(240,230,210,.72);background:linear-gradient(180deg,#f0dfb4,#c8aa6e 54%,#9c7a37);color:#08121f;font:400 14px/1 'Marcellus',Georgia,serif;letter-spacing:.045em;white-space:nowrap;cursor:pointer;box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 4px 14px rgba(200,170,110,.18);transition:filter .16s ease,box-shadow .16s ease,transform .12s ease}
+.pf-luck:hover{filter:brightness(1.06);box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 7px 22px rgba(200,170,110,.34)}
+.pf-luck:active{transform:translateY(1px)}
+.pf-luck:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.pf-luck[aria-expanded="true"]{box-shadow:inset 0 0 0 1px rgba(10,200,185,.75),inset 0 1px 0 rgba(255,255,255,.55),0 7px 22px rgba(10,200,185,.18)}
 .luck-die{width:15px;height:15px;flex:none;fill:currentColor}
 .luck-die circle{fill:currentColor}
 .luck{margin-top:16px;padding:18px 20px;border:1px solid rgba(200,170,110,.45);background:linear-gradient(155deg,rgba(200,170,110,.1),rgba(5,15,27,.95) 55%);box-shadow:0 18px 44px rgba(0,0,0,.4);scroll-margin-top:130px;display:grid;grid-template-columns:minmax(220px,1fr) minmax(0,480px);gap:26px;align-items:center}
@@ -193,6 +197,11 @@ html.js .pick-filter{display:flex}
 .luck-tag.is-watch{color:var(--teal);border-color:rgba(10,200,185,.4);background:rgba(10,200,185,.08)}
 .luck-status{margin:6px 0 0;color:var(--muted);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase}
 .luck-lede{margin:12px 0 16px;max-width:330px;color:var(--muted);font-size:12.5px;line-height:1.55}
+.luck-pick{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin:0 0 16px}
+.luck-pick-label{color:var(--muted);font:700 9px 'Inter',sans-serif;letter-spacing:.13em;text-transform:uppercase}
+.luck-chip{height:30px;padding:0 9px;font-size:9.5px;letter-spacing:.08em}
+.luck-chip .role-glyph{width:14px;height:14px}
+.luck-none{width:100%;margin:0;padding:30px 18px;border:1px dashed rgba(200,170,110,.26);color:var(--muted);text-align:center}
 .luck-actions{display:flex;gap:8px;flex-wrap:wrap}
 .luck-again{height:36px;padding:0 16px;border:1px solid rgba(200,170,110,.5);background:rgba(1,10,19,.55);color:var(--gold-bright);font:400 14px 'Marcellus',Georgia,serif;letter-spacing:.04em;cursor:pointer;transition:background .16s ease,border-color .16s ease}
 .luck-again:hover{background:rgba(200,170,110,.14);border-color:var(--gold)}
@@ -265,7 +274,7 @@ td .icon{width:28px;height:28px;margin-right:8px;vertical-align:-9px;box-shadow:
 
 footer{position:relative;z-index:1;margin-top:84px;padding:28px 0 46px;border-top:1px solid rgba(200,170,110,.2);color:var(--muted);font-size:11.5px}
 footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
-footer .brand{font-size:12px}
+footer .brand .wm{height:14px}
 footer .brand .logo{width:24px;height:24px}
 .disclaimer{max-width:780px;line-height:1.65;margin:0}
 
@@ -301,6 +310,7 @@ footer .brand .logo{width:24px;height:24px}
   .luck{padding:14px;grid-template-columns:1fr;gap:14px}
   .luck-kicker{font-size:19px}
   .luck-lede{margin:9px 0 12px;max-width:none}
+  .luck-chip{height:34px;padding:0 10px;font-size:10px}
   .pf-count{flex-basis:100%;margin-left:0}
   .pf-more{width:100%}
   .logo{width:30px;height:30px}
@@ -322,14 +332,16 @@ footer .brand .logo{width:24px;height:24px}
   .feat-wr b{font-size:34px}
   .stats div{padding:7px 8px}
   .count{display:none}
+  .brand .wm{height:17px}
 }
 @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important;transition:none!important}.luck-slot .card{animation:none!important}}
 </style><script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
+<svg class="wm-defs" aria-hidden="true" focusable="false"><defs><linearGradient id="wm-gold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="100"><stop offset="0" stop-color="#f8f1e2"/><stop offset=".18" stop-color="#eadcb8"/><stop offset=".45" stop-color="#cfb177"/><stop offset=".72" stop-color="#a98750"/><stop offset=".9" stop-color="#785a28"/><stop offset="1" stop-color="#c2a468"/></linearGradient><symbol id="wordmark" viewBox="-11 0 756 100"><g fill="url(#wm-gold)"><g transform="translate(0 0)"><path d="M-10 0L30 0L20 11L20 100L0 100L0 11ZM-10 100L0 86L52 86L52 92L45 100Z"/></g><g transform="translate(66 0)"><path d="M18 0L52 0L70 18L70 82L52 100L18 100L0 82L0 18ZM19 27L19 73L27 81L43 81L51 73L51 27L43 19L27 19Z"/></g><g transform="translate(150 0)"><path d="M-10 0L30 0L20 11L20 100L0 100L0 11ZM-10 100L0 86L52 86L52 92L45 100Z"/></g><g transform="translate(216 0)"><path d="M18 0L52 0L70 18L70 82L52 100L18 100L0 82L0 18ZM19 27L19 73L27 81L43 81L51 73L51 27L43 19L27 19Z"/></g><g transform="translate(300 0)"><path d="M-10 0L30 0L20 11L20 89L30 100L-10 100L0 89L0 11ZM20 0L50 0L50 13L20 13ZM50 13L43 13L50 20ZM20 44L45 44L45 56L20 56ZM45 56L38 56L45 62Z"/></g><g transform="translate(364 0)"><path d="M-10 0L30 0L20 11L20 89L30 100L-10 100L0 89L0 11ZM20 0L50 0L50 13L20 13ZM50 13L43 13L50 20ZM20 44L45 44L45 56L20 56ZM45 56L38 56L45 62Z"/></g><g transform="translate(428 0)"><path d="M-10 0L35 0L48 64L61 0L106 0L96 11L96 89L106 100L76 100L76 14L54 100L42 100L20 14L20 100L-10 100L0 89L0 11Z"/></g><g transform="translate(538 0)"><path d="M-10 0L30 0L20 11L20 89L30 100L-10 100L0 89L0 11ZM20 0L50 0L50 13L20 13ZM50 13L43 13L50 20ZM20 44L45 44L45 56L20 56ZM45 56L38 56L45 62ZM20 87L50 87L50 100L20 100ZM50 100L43 100L50 93Z"/></g><g transform="translate(602 0)"><path d="M0 0L54 0L54 13L0 13ZM0 13L8 13L0 21ZM54 13L46 13L54 21ZM17 0L37 0L37 89L47 100L7 100L17 89Z"/></g><g transform="translate(670 0)"><path d="M28 0L38 0L18 100L0 100ZM28 0L38 0L64 100L46 100ZM23 64L42 64L42 76L23 76ZM-10 100L0 90L18 90L22 100ZM42 100L46 90L64 90L74 100Z"/></g></g></symbol></defs></svg>
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="inner">
-<a class="brand" href="./"><svg class="logo" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M24 2.5 43 13.4v21.2L24 45.5 5 34.6V13.4Z" fill="#071322" stroke="#c8aa6e" stroke-width="1.5"/><path d="M24 7 38.8 15.4v17.2L24 41 9.2 32.6V15.4Z" fill="none" stroke="#c8aa6e" stroke-width=".7" opacity=".35"/><path d="M12 34 36 14M12 14l24 20" stroke="#c8aa6e" stroke-width="1" opacity=".22"/><path d="M24 12.5 32.8 24 24 35.5 15.2 24Z" fill="#0ac8b9" fill-opacity=".14" stroke="#0ac8b9" stroke-width="1"/><path d="M24 17.2 28.3 24 24 30.8 19.7 24Z" fill="#0ac8b9"/><path d="M24 17.2 28.3 24H19.7Z" fill="#f0e6d2" opacity=".7"/></svg>Pocket <em>Picks</em><span class="beta">Beta</span></a>
+<a class="brand" href="./" aria-label="loloffmeta — home"><svg class="logo" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M24 2.5 43 13.4v21.2L24 45.5 5 34.6V13.4Z" fill="#071322" stroke="#c8aa6e" stroke-width="1.5"/><path d="M24 7 38.8 15.4v17.2L24 41 9.2 32.6V15.4Z" fill="none" stroke="#c8aa6e" stroke-width=".7" opacity=".35"/><path d="M12 34 36 14M12 14l24 20" stroke="#c8aa6e" stroke-width="1" opacity=".22"/><path d="M24 12.5 32.8 24 24 35.5 15.2 24Z" fill="#0ac8b9" fill-opacity=".14" stroke="#0ac8b9" stroke-width="1"/><path d="M24 17.2 28.3 24 24 30.8 19.7 24Z" fill="#0ac8b9"/><path d="M24 17.2 28.3 24H19.7Z" fill="#f0e6d2" opacity=".7"/></svg><svg class="wm" viewBox="-11 0 756 100" aria-hidden="true" focusable="false"><use href="#wordmark"/></svg><span class="beta">Beta</span></a>
 <nav aria-label="Sections"><a href="#picks">Picks</a><a href="#watch">Watch</a><a href="#keystones">Keystones</a><a href="#signup" class="nav-cta">Join Beta</a></nav>
 </div></header>
 <main id="main" class="wrap">
@@ -400,7 +412,12 @@ footer .brand .logo{width:24px;height:24px}
 <div class="luck-side">
   <p class="luck-kicker">Your dare <span class="luck-tag"></span></p>
   <p class="luck-status" aria-live="polite"></p>
-  <p class="luck-lede">One random pull from the off-role list and the watch list. Play it if you dare.</p>
+  <p class="luck-lede">Lock a lane, roll, and play whatever comes up. Any lane pulls from the off-role and watch lists.</p>
+  <div class="luck-pick" role="group" aria-label="Choose a lane to roll in">
+    <span class="luck-pick-label">Roll in</span>
+    <button type="button" class="chip luck-chip is-on" data-luck-role="all" aria-pressed="true"><svg class="role-glyph" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 0L20 10L10 20L0 10L10 0ZM10 3.6L3.6 10L10 16.4L16.4 10L10 3.6Z"/><path d="M10 6.6L13.4 10L10 13.4L6.6 10L10 6.6Z"/></svg><span>Any lane</span></button>
+    <button type="button" class="chip luck-chip" data-luck-role="Top" aria-pressed="false"><svg class="role-glyph" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><rect x="7.7778" y="7.7778" width="5.5556" height="5.5556" opacity=".45"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H18.8889L15 3.8889H4.4444V14.4444L0 18.8889V0Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20 20H2.2222L5 17.2222H16.6667V5.5556L20 2.2222V20Z" opacity=".45"/></svg><span>Top</span></button><button type="button" class="chip luck-chip" data-luck-role="Jungle" aria-pressed="false"><svg class="role-glyph" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 7.6111S11.5 4.6111 15 .1111C13.5 3.6111 12.5 7.6111 12 11.6111Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 16.6111C12.5 11.6111 15.5 7.1111 18.5 5.6111C16 8.6111 15.5 10.6111 15.5 14.1111Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M1 5.6111C4.5 8.1111 5.5 8.6111 7 11.6111C7 6.6111 6 4.6111 4 .1111C13.5 13.6111 9.5 19.6111 9.5 19.6111L5.2713 15.3824L4 14.1111S4 9.1111 1 5.6111Z"/></svg><span>Jungle</span></button><button type="button" class="chip luck-chip" data-luck-role="Mid" aria-pressed="false"><svg class="role-glyph" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 20H7.7778L10.5556 17.2222H16.6667V11.1111L20 7.7778V20Z" opacity=".45"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H12.2222L9.4444 2.7778H3.3333V8.8889L0 12.2222V0Z" opacity=".45"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 16.1111L16.1111 0H20V3.8889L3.8889 20H0V16.1111Z"/></svg><span>Mid</span></button><button type="button" class="chip luck-chip" data-luck-role="Bot" aria-pressed="false"><svg class="role-glyph" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><rect x="6.6667" y="6.6667" width="5.5556" height="5.5556" opacity=".45"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20 20H1.1111L5 16.1111H15.5556V5.5556L20 1.1111V20Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H17.7778L15 2.7778H3.3333V14.4444L0 17.7778V0Z" opacity=".45"/></svg><span>Bot</span></button><button type="button" class="chip luck-chip" data-luck-role="Support" aria-pressed="false"><svg class="role-glyph" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M12.5 17 10 18.667 7.5 17 9.167 7.833 10 8.25 10.833 7.833 12.5 17Z"/><path d="M7.917 7 7.083 11.167 3.958 9.917 5.417 7.417H3.958C1.25 7 0 5.333 0 5.333H6.25L7.917 7Z"/><path d="M20 5.333S18.75 7 16.042 7.417H14.583L16.042 9.917 12.917 11.167 12.083 7 13.75 5.333H20Z"/><path d="M12.917 3.25 10 7 7.083 3.25 7.917 2H12.083L12.917 3.25Z"/></svg><span>Support</span></button>
+  </div>
   <div class="luck-actions">
     <button class="luck-again" type="button">Roll again</button>
     <button class="luck-close" type="button">Close</button>
@@ -523,11 +540,11 @@ footer .brand .logo{width:24px;height:24px}
 </div>
 <div class="badges"></div>
 </article>
-<article class="card" data-champ="Fiddlesticks" data-role="Mid" data-wr="0.6262135922330098" data-games="519" data-pick="0.0010316001671542663">
+<article class="card" data-champ="FiddleSticks" data-role="Mid" data-wr="0.6262135922330098" data-games="519" data-pick="0.0010316001671542663">
 <header>
-  <img class="icon" loading="lazy" alt="" src="https://ddragon.leagueoflegends.com/cdn/16.19.1/img/champion/Fiddlesticks.png" onerror="this.style.visibility='hidden'">
+  <img class="icon" loading="lazy" alt="" src="https://ddragon.leagueoflegends.com/cdn/16.19.1/img/champion/FiddleSticks.png" onerror="this.style.visibility='hidden'">
   <div class="who">
-    <h3>Fiddlesticks</h3>
+    <h3>FiddleSticks</h3>
     <div class="sub"><span class="role"><svg class="role-glyph" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 20H7.7778L10.5556 17.2222H16.6667V11.1111L20 7.7778V20Z" opacity=".45"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H12.2222L9.4444 2.7778H3.3333V8.8889L0 12.2222V0Z" opacity=".45"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 16.1111L16.1111 0H20V3.8889L3.8889 20H0V16.1111Z"/></svg>Mid</span> <span class="usual">usually Jungle / Support / Top</span></div>
   </div>
   <div class="wr"><b>62.6%</b><span>win rate</span></div>
@@ -684,11 +701,11 @@ footer .brand .logo{width:24px;height:24px}
 </div>
 <div class="badges"><span class="badge warn">PBE: champion changes (2)</span></div>
 </article>
-<article class="card" data-champ="Master Yi" data-role="Bot" data-wr="0.5893719806763285" data-games="807" data-pick="0.001468092680129005">
+<article class="card" data-champ="MasterYi" data-role="Bot" data-wr="0.5893719806763285" data-games="807" data-pick="0.001468092680129005">
 <header>
   <img class="icon" loading="lazy" alt="" src="https://ddragon.leagueoflegends.com/cdn/16.19.1/img/champion/MasterYi.png" onerror="this.style.visibility='hidden'">
   <div class="who">
-    <h3>Master Yi</h3>
+    <h3>MasterYi</h3>
     <div class="sub"><span class="role"><svg class="role-glyph" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><rect x="6.6667" y="6.6667" width="5.5556" height="5.5556" opacity=".45"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20 20H1.1111L5 16.1111H15.5556V5.5556L20 1.1111V20Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H17.7778L15 2.7778H3.3333V14.4444L0 17.7778V0Z" opacity=".45"/></svg>Bot</span> <span class="usual">usually Jungle</span></div>
   </div>
   <div class="wr"><b>58.9%</b><span>win rate</span></div>
@@ -730,11 +747,11 @@ footer .brand .logo{width:24px;height:24px}
 </div>
 <div class="badges"></div>
 </article>
-<article class="card" data-champ="Twisted Fate" data-role="Top" data-wr="0.5915915915915916" data-games="2173" data-pick="0.00402162679218366">
+<article class="card" data-champ="TwistedFate" data-role="Top" data-wr="0.5915915915915916" data-games="2173" data-pick="0.00402162679218366">
 <header>
   <img class="icon" loading="lazy" alt="" src="https://ddragon.leagueoflegends.com/cdn/16.19.1/img/champion/TwistedFate.png" onerror="this.style.visibility='hidden'">
   <div class="who">
-    <h3>Twisted Fate</h3>
+    <h3>TwistedFate</h3>
     <div class="sub"><span class="role"><svg class="role-glyph" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><rect x="7.7778" y="7.7778" width="5.5556" height="5.5556" opacity=".45"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H18.8889L15 3.8889H4.4444V14.4444L0 18.8889V0Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20 20H2.2222L5 17.2222H16.6667V5.5556L20 2.2222V20Z" opacity=".45"/></svg>Top</span> <span class="usual">usually Mid</span></div>
   </div>
   <div class="wr"><b>59.2%</b><span>win rate</span></div>
@@ -799,11 +816,11 @@ footer .brand .logo{width:24px;height:24px}
 </div>
 <div class="badges"></div>
 </article>
-<article class="card" data-champ="Master Yi" data-role="Mid" data-wr="0.6323529411764706" data-games="679" data-pick="0.001342336762120144">
+<article class="card" data-champ="MasterYi" data-role="Mid" data-wr="0.6323529411764706" data-games="679" data-pick="0.001342336762120144">
 <header>
   <img class="icon" loading="lazy" alt="" src="https://ddragon.leagueoflegends.com/cdn/16.19.1/img/champion/MasterYi.png" onerror="this.style.visibility='hidden'">
   <div class="who">
-    <h3>Master Yi</h3>
+    <h3>MasterYi</h3>
     <div class="sub"><span class="role"><svg class="role-glyph" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 20H7.7778L10.5556 17.2222H16.6667V11.1111L20 7.7778V20Z" opacity=".45"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H12.2222L9.4444 2.7778H3.3333V8.8889L0 12.2222V0Z" opacity=".45"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 16.1111L16.1111 0H20V3.8889L3.8889 20H0V16.1111Z"/></svg>Mid</span> <span class="usual">usually Jungle</span></div>
   </div>
   <div class="wr"><b>63.2%</b><span>win rate</span></div>
@@ -937,11 +954,11 @@ footer .brand .logo{width:24px;height:24px}
 </div>
 <div class="badges"></div>
 </article>
-<article class="card" data-champ="Twisted Fate" data-role="Bot" data-wr="0.6136363636363636" data-games="518" data-pick="0.0009732528187222142">
+<article class="card" data-champ="TwistedFate" data-role="Bot" data-wr="0.6136363636363636" data-games="518" data-pick="0.0009732528187222142">
 <header>
   <img class="icon" loading="lazy" alt="" src="https://ddragon.leagueoflegends.com/cdn/16.19.1/img/champion/TwistedFate.png" onerror="this.style.visibility='hidden'">
   <div class="who">
-    <h3>Twisted Fate</h3>
+    <h3>TwistedFate</h3>
     <div class="sub"><span class="role"><svg class="role-glyph" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><rect x="6.6667" y="6.6667" width="5.5556" height="5.5556" opacity=".45"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20 20H1.1111L5 16.1111H15.5556V5.5556L20 1.1111V20Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H17.7778L15 2.7778H3.3333V14.4444L0 17.7778V0Z" opacity=".45"/></svg>Bot</span> <span class="usual">usually Mid</span></div>
   </div>
   <div class="wr"><b>61.4%</b><span>win rate</span></div>
@@ -1006,11 +1023,11 @@ footer .brand .logo{width:24px;height:24px}
 </div>
 <div class="badges"></div>
 </article>
-<article class="card" data-champ="K&#x27;Sante" data-role="Mid" data-wr="0.6229508196721312" data-games="1031" data-pick="0.0018427055641343742">
+<article class="card" data-champ="KSante" data-role="Mid" data-wr="0.6229508196721312" data-games="1031" data-pick="0.0018427055641343742">
 <header>
   <img class="icon" loading="lazy" alt="" src="https://ddragon.leagueoflegends.com/cdn/16.19.1/img/champion/KSante.png" onerror="this.style.visibility='hidden'">
   <div class="who">
-    <h3>K&#x27;Sante</h3>
+    <h3>KSante</h3>
     <div class="sub"><span class="role"><svg class="role-glyph" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 20H7.7778L10.5556 17.2222H16.6667V11.1111L20 7.7778V20Z" opacity=".45"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H12.2222L9.4444 2.7778H3.3333V8.8889L0 12.2222V0Z" opacity=".45"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 16.1111L16.1111 0H20V3.8889L3.8889 20H0V16.1111Z"/></svg>Mid</span> <span class="usual">usually Top</span></div>
   </div>
   <div class="wr"><b>62.3%</b><span>win rate</span></div>
@@ -1167,11 +1184,11 @@ footer .brand .logo{width:24px;height:24px}
 </div>
 <div class="badges"></div>
 </article>
-<article class="card" data-champ="Wukong" data-role="Mid" data-wr="0.5887096774193549" data-games="401" data-pick="0.0007899839900743636">
+<article class="card" data-champ="MonkeyKing" data-role="Mid" data-wr="0.5887096774193549" data-games="401" data-pick="0.0007899839900743636">
 <header>
   <img class="icon" loading="lazy" alt="" src="https://ddragon.leagueoflegends.com/cdn/16.19.1/img/champion/MonkeyKing.png" onerror="this.style.visibility='hidden'">
   <div class="who">
-    <h3>Wukong</h3>
+    <h3>MonkeyKing</h3>
     <div class="sub"><span class="role"><svg class="role-glyph" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 20H7.7778L10.5556 17.2222H16.6667V11.1111L20 7.7778V20Z" opacity=".45"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H12.2222L9.4444 2.7778H3.3333V8.8889L0 12.2222V0Z" opacity=".45"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 16.1111L16.1111 0H20V3.8889L3.8889 20H0V16.1111Z"/></svg>Mid</span> <span class="usual">usually Jungle / Top</span></div>
   </div>
   <div class="wr"><b>58.9%</b><span>win rate</span></div>
@@ -1282,11 +1299,11 @@ footer .brand .logo{width:24px;height:24px}
 </div>
 <div class="badges"></div>
 </article>
-<article class="card" data-champ="Aurelion Sol" data-role="Top" data-wr="0.5786163522012578" data-games="645" data-pick="0.0011777806008234535">
+<article class="card" data-champ="AurelionSol" data-role="Top" data-wr="0.5786163522012578" data-games="645" data-pick="0.0011777806008234535">
 <header>
   <img class="icon" loading="lazy" alt="" src="https://ddragon.leagueoflegends.com/cdn/16.19.1/img/champion/AurelionSol.png" onerror="this.style.visibility='hidden'">
   <div class="who">
-    <h3>Aurelion Sol</h3>
+    <h3>AurelionSol</h3>
     <div class="sub"><span class="role"><svg class="role-glyph" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><rect x="7.7778" y="7.7778" width="5.5556" height="5.5556" opacity=".45"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H18.8889L15 3.8889H4.4444V14.4444L0 18.8889V0Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20 20H2.2222L5 17.2222H16.6667V5.5556L20 2.2222V20Z" opacity=".45"/></svg>Top</span> <span class="usual">usually Mid / Bot</span></div>
   </div>
   <div class="wr"><b>57.9%</b><span>win rate</span></div>
@@ -1489,11 +1506,11 @@ footer .brand .logo{width:24px;height:24px}
 </div>
 <div class="badges"><span class="badge warn">PBE: champion changes (2)</span></div>
 </article>
-<article class="card" data-champ="Jarvan IV" data-role="Top" data-wr="0.6031746031746031" data-games="424" data-pick="0.0007835678204080526">
+<article class="card" data-champ="JarvanIV" data-role="Top" data-wr="0.6031746031746031" data-games="424" data-pick="0.0007835678204080526">
 <header>
   <img class="icon" loading="lazy" alt="" src="https://ddragon.leagueoflegends.com/cdn/16.19.1/img/champion/JarvanIV.png" onerror="this.style.visibility='hidden'">
   <div class="who">
-    <h3>Jarvan IV</h3>
+    <h3>JarvanIV</h3>
     <div class="sub"><span class="role"><svg class="role-glyph" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><rect x="7.7778" y="7.7778" width="5.5556" height="5.5556" opacity=".45"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H18.8889L15 3.8889H4.4444V14.4444L0 18.8889V0Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20 20H2.2222L5 17.2222H16.6667V5.5556L20 2.2222V20Z" opacity=".45"/></svg>Top</span> <span class="usual">usually Jungle</span></div>
   </div>
   <div class="wr"><b>60.3%</b><span>win rate</span></div>
@@ -1581,11 +1598,11 @@ footer .brand .logo{width:24px;height:24px}
 </div>
 <div class="badges"></div>
 </article>
-<article class="card" data-champ="Cho&#x27;Gath" data-role="Mid" data-wr="0.5399811853245532" data-games="2734" data-pick="0.005108168622516604">
+<article class="card" data-champ="Chogath" data-role="Mid" data-wr="0.5399811853245532" data-games="2734" data-pick="0.005108168622516604">
 <header>
   <img class="icon" loading="lazy" alt="" src="https://ddragon.leagueoflegends.com/cdn/16.19.1/img/champion/Chogath.png" onerror="this.style.visibility='hidden'">
   <div class="who">
-    <h3>Cho&#x27;Gath</h3>
+    <h3>Chogath</h3>
     <div class="sub"><span class="role"><svg class="role-glyph" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 20H7.7778L10.5556 17.2222H16.6667V11.1111L20 7.7778V20Z" opacity=".45"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H12.2222L9.4444 2.7778H3.3333V8.8889L0 12.2222V0Z" opacity=".45"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 16.1111L16.1111 0H20V3.8889L3.8889 20H0V16.1111Z"/></svg>Mid</span> <span class="usual">usually Jungle / Top</span></div>
   </div>
   <div class="wr"><b>54.0%</b><span>win rate</span></div>
@@ -1765,11 +1782,11 @@ footer .brand .logo{width:24px;height:24px}
 </div>
 <div class="badges"></div>
 </article>
-<article class="card" data-champ="Vel&#x27;Koz" data-role="Top" data-wr="0.5262449528936743" data-games="743" data-pick="0.001358353902175057">
+<article class="card" data-champ="Velkoz" data-role="Top" data-wr="0.5262449528936743" data-games="743" data-pick="0.001358353902175057">
 <header>
   <img class="icon" loading="lazy" alt="" src="https://ddragon.leagueoflegends.com/cdn/16.19.1/img/champion/Velkoz.png" onerror="this.style.visibility='hidden'">
   <div class="who">
-    <h3>Vel&#x27;Koz</h3>
+    <h3>Velkoz</h3>
     <div class="sub"><span class="role"><svg class="role-glyph" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><rect x="7.7778" y="7.7778" width="5.5556" height="5.5556" opacity=".45"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H18.8889L15 3.8889H4.4444V14.4444L0 18.8889V0Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20 20H2.2222L5 17.2222H16.6667V5.5556L20 2.2222V20Z" opacity=".45"/></svg>Top</span> <span class="usual">usually Support / Mid / Bot</span></div>
   </div>
   <div class="wr"><b>52.6%</b><span>win rate</span></div>
@@ -1926,11 +1943,11 @@ footer .brand .logo{width:24px;height:24px}
 </div>
 <div class="badges"></div>
 </article>
-<article class="card" data-champ="Twisted Fate" data-role="Support" data-wr="0.5418848167539267" data-games="1720" data-pick="0.0032579424522826052">
+<article class="card" data-champ="TwistedFate" data-role="Support" data-wr="0.5418848167539267" data-games="1720" data-pick="0.0032579424522826052">
 <header>
   <img class="icon" loading="lazy" alt="" src="https://ddragon.leagueoflegends.com/cdn/16.19.1/img/champion/TwistedFate.png" onerror="this.style.visibility='hidden'">
   <div class="who">
-    <h3>Twisted Fate</h3>
+    <h3>TwistedFate</h3>
     <div class="sub"><span class="role"><svg class="role-glyph" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M12.5 17 10 18.667 7.5 17 9.167 7.833 10 8.25 10.833 7.833 12.5 17Z"/><path d="M7.917 7 7.083 11.167 3.958 9.917 5.417 7.417H3.958C1.25 7 0 5.333 0 5.333H6.25L7.917 7Z"/><path d="M20 5.333S18.75 7 16.042 7.417H14.583L16.042 9.917 12.917 11.167 12.083 7 13.75 5.333H20Z"/><path d="M12.917 3.25 10 7 7.083 3.25 7.917 2H12.083L12.917 3.25Z"/></svg>Support</span> <span class="usual">usually Mid</span></div>
   </div>
   <div class="wr"><b>54.2%</b><span>win rate</span></div>
@@ -2372,11 +2389,11 @@ footer .brand .logo{width:24px;height:24px}
 </div>
 <div class="badges"></div>
 </article>
-<article class="card" data-champ="Rek&#x27;Sai" data-role="Mid" data-wr="0.5952380952380952" data-games="42" data-pick="9.102610697365726e-05">
+<article class="card" data-champ="RekSai" data-role="Mid" data-wr="0.5952380952380952" data-games="42" data-pick="9.102610697365726e-05">
 <header>
   <img class="icon" loading="lazy" alt="" src="https://ddragon.leagueoflegends.com/cdn/16.19.1/img/champion/RekSai.png" onerror="this.style.visibility='hidden'">
   <div class="who">
-    <h3>Rek&#x27;Sai</h3>
+    <h3>RekSai</h3>
     <div class="sub"><span class="role"><svg class="role-glyph" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 20H7.7778L10.5556 17.2222H16.6667V11.1111L20 7.7778V20Z" opacity=".45"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H12.2222L9.4444 2.7778H3.3333V8.8889L0 12.2222V0Z" opacity=".45"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 16.1111L16.1111 0H20V3.8889L3.8889 20H0V16.1111Z"/></svg>Mid</span> <span class="usual">usually Jungle</span></div>
   </div>
   <div class="wr"><b>59.5%</b><span>win rate</span></div>
@@ -2418,11 +2435,11 @@ footer .brand .logo{width:24px;height:24px}
 </div>
 <div class="badges"></div>
 </article>
-<article class="card" data-champ="Tahm Kench" data-role="Bot" data-wr="0.5714285714285714" data-games="203" data-pick="0.00048202192064693636">
+<article class="card" data-champ="TahmKench" data-role="Bot" data-wr="0.5714285714285714" data-games="203" data-pick="0.00048202192064693636">
 <header>
   <img class="icon" loading="lazy" alt="" src="https://ddragon.leagueoflegends.com/cdn/16.19.1/img/champion/TahmKench.png" onerror="this.style.visibility='hidden'">
   <div class="who">
-    <h3>Tahm Kench</h3>
+    <h3>TahmKench</h3>
     <div class="sub"><span class="role"><svg class="role-glyph" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><rect x="6.6667" y="6.6667" width="5.5556" height="5.5556" opacity=".45"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20 20H1.1111L5 16.1111H15.5556V5.5556L20 1.1111V20Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H17.7778L15 2.7778H3.3333V14.4444L0 17.7778V0Z" opacity=".45"/></svg>Bot</span> <span class="usual">usually Support / Top</span></div>
   </div>
   <div class="wr"><b>57.1%</b><span>win rate</span></div>
@@ -2487,11 +2504,11 @@ footer .brand .logo{width:24px;height:24px}
 </div>
 <div class="badges"></div>
 </article>
-<article class="card" data-champ="Lee Sin" data-role="Top" data-wr="0.5543478260869565" data-games="1278" data-pick="0.0023994028561609452">
+<article class="card" data-champ="LeeSin" data-role="Top" data-wr="0.5543478260869565" data-games="1278" data-pick="0.0023994028561609452">
 <header>
   <img class="icon" loading="lazy" alt="" src="https://ddragon.leagueoflegends.com/cdn/16.19.1/img/champion/LeeSin.png" onerror="this.style.visibility='hidden'">
   <div class="who">
-    <h3>Lee Sin</h3>
+    <h3>LeeSin</h3>
     <div class="sub"><span class="role"><svg class="role-glyph" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><rect x="7.7778" y="7.7778" width="5.5556" height="5.5556" opacity=".45"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H18.8889L15 3.8889H4.4444V14.4444L0 18.8889V0Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20 20H2.2222L5 17.2222H16.6667V5.5556L20 2.2222V20Z" opacity=".45"/></svg>Top</span> <span class="usual">usually Jungle</span></div>
   </div>
   <div class="wr"><b>55.4%</b><span>win rate</span></div>
@@ -2533,11 +2550,11 @@ footer .brand .logo{width:24px;height:24px}
 </div>
 <div class="badges"><span class="badge warn" title="Most games come from a single player. Shown because that player alone clears the bar; it may reflect their skill as much as the pick.">1 player · 58g · 56.9%</span></div>
 </article>
-<article class="card" data-champ="LeBlanc" data-role="Top" data-wr="0.5517241379310345" data-games="694" data-pick="0.0012083293709933135">
+<article class="card" data-champ="Leblanc" data-role="Top" data-wr="0.5517241379310345" data-games="694" data-pick="0.0012083293709933135">
 <header>
   <img class="icon" loading="lazy" alt="" src="https://ddragon.leagueoflegends.com/cdn/16.19.1/img/champion/Leblanc.png" onerror="this.style.visibility='hidden'">
   <div class="who">
-    <h3>LeBlanc</h3>
+    <h3>Leblanc</h3>
     <div class="sub"><span class="role"><svg class="role-glyph" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><rect x="7.7778" y="7.7778" width="5.5556" height="5.5556" opacity=".45"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H18.8889L15 3.8889H4.4444V14.4444L0 18.8889V0Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20 20H2.2222L5 17.2222H16.6667V5.5556L20 2.2222V20Z" opacity=".45"/></svg>Top</span> <span class="usual">usually Mid / Support</span></div>
   </div>
   <div class="wr"><b>55.2%</b><span>win rate</span></div>
@@ -2773,7 +2790,7 @@ footer .brand .logo{width:24px;height:24px}
 <td class="item-cell">Stormraider&#x27;s Surge </td><td class="win-cell">68.6%</td>
 <td>59.8%</td><td>48.1%</td><td>51</td><td>0.8%</td></tr>
 <tr>
-<td class="champ-cell"><img class="icon" loading="lazy" alt="" src="https://ddragon.leagueoflegends.com/cdn/16.19.1/img/champion/TwistedFate.png" onerror="this.style.visibility='hidden'"><span class="champ-name">Twisted Fate</span> <span class="role-inline">Mid</span></td>
+<td class="champ-cell"><img class="icon" loading="lazy" alt="" src="https://ddragon.leagueoflegends.com/cdn/16.19.1/img/champion/TwistedFate.png" onerror="this.style.visibility='hidden'"><span class="champ-name">TwistedFate</span> <span class="role-inline">Mid</span></td>
 <td class="item-cell">First Strike </td><td class="win-cell">64.7%</td>
 <td>59.8%</td><td>51.9%</td><td>119</td><td>1.4%</td></tr>
 <tr>
@@ -2781,7 +2798,7 @@ footer .brand .logo{width:24px;height:24px}
 <td class="item-cell">Press the Attack </td><td class="win-cell">68.9%</td>
 <td>59.5%</td><td>50.4%</td><td>45</td><td>0.6%</td></tr>
 <tr>
-<td class="champ-cell"><img class="icon" loading="lazy" alt="" src="https://ddragon.leagueoflegends.com/cdn/16.19.1/img/champion/MissFortune.png" onerror="this.style.visibility='hidden'"><span class="champ-name">Miss Fortune</span> <span class="role-inline">Bot</span></td>
+<td class="champ-cell"><img class="icon" loading="lazy" alt="" src="https://ddragon.leagueoflegends.com/cdn/16.19.1/img/champion/MissFortune.png" onerror="this.style.visibility='hidden'"><span class="champ-name">MissFortune</span> <span class="role-inline">Bot</span></td>
 <td class="item-cell">Lethal Tempo </td><td class="win-cell">69.0%</td>
 <td>59.3%</td><td>50.0%</td><td>42</td><td>1.7%</td></tr>
 <tr>
@@ -2797,7 +2814,7 @@ footer .brand .logo{width:24px;height:24px}
 <td class="item-cell">Deathfire Touch </td><td class="win-cell">64.3%</td>
 <td>58.7%</td><td>47.7%</td><td>126</td><td>2.1%</td></tr>
 <tr>
-<td class="champ-cell"><img class="icon" loading="lazy" alt="" src="https://ddragon.leagueoflegends.com/cdn/16.19.1/img/champion/MasterYi.png" onerror="this.style.visibility='hidden'"><span class="champ-name">Master Yi</span> <span class="role-inline">Jungle</span></td>
+<td class="champ-cell"><img class="icon" loading="lazy" alt="" src="https://ddragon.leagueoflegends.com/cdn/16.19.1/img/champion/MasterYi.png" onerror="this.style.visibility='hidden'"><span class="champ-name">MasterYi</span> <span class="role-inline">Jungle</span></td>
 <td class="item-cell">Press the Attack </td><td class="win-cell">67.4%</td>
 <td>57.8%</td><td>48.2%</td><td>43</td><td>0.2%</td></tr>
 <tr>
@@ -2858,9 +2875,9 @@ footer .brand .logo{width:24px;height:24px}
 <div class="join-main">
 <p class="kicker">Beta · Release list</p>
 <h2 id="join-title">The full build is coming.</h2>
-<p class="lede">Pocket Picks is in beta. Join the release list for full builds, stats for your own champion pool and first access when Full Access opens.</p>
+<p class="lede">loloffmeta is in beta. Join the release list for full builds, stats for your own champion pool and first access when Full Access opens.</p>
 <form class="signup-form" action="https://formspree.io/f/xvkkwakw" method="POST">
-<input type="hidden" name="_subject" value="Pocket Picks beta signup">
+<input type="hidden" name="_subject" value="loloffmeta beta signup">
 <input type="hidden" name="_next" value="https://dcareem.github.io/pocket-picks/?joined=1#signup">
 <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
 <div class="fields">
@@ -2909,8 +2926,8 @@ footer .brand .logo{width:24px;height:24px}
 </script>
 </main>
 <footer><div class="wrap">
-<a class="brand" href="./"><svg class="logo" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M24 2.5 43 13.4v21.2L24 45.5 5 34.6V13.4Z" fill="#071322" stroke="#c8aa6e" stroke-width="1.5"/><path d="M24 7 38.8 15.4v17.2L24 41 9.2 32.6V15.4Z" fill="none" stroke="#c8aa6e" stroke-width=".7" opacity=".35"/><path d="M12 34 36 14M12 14l24 20" stroke="#c8aa6e" stroke-width="1" opacity=".22"/><path d="M24 12.5 32.8 24 24 35.5 15.2 24Z" fill="#0ac8b9" fill-opacity=".14" stroke="#0ac8b9" stroke-width="1"/><path d="M24 17.2 28.3 24 24 30.8 19.7 24Z" fill="#0ac8b9"/><path d="M24 17.2 28.3 24H19.7Z" fill="#f0e6d2" opacity=".7"/></svg>Pocket <em>Picks</em></a>
-<p class="disclaimer">Pocket Picks isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.</p>
+<a class="brand" href="./" aria-label="loloffmeta"><svg class="logo" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M24 2.5 43 13.4v21.2L24 45.5 5 34.6V13.4Z" fill="#071322" stroke="#c8aa6e" stroke-width="1.5"/><path d="M24 7 38.8 15.4v17.2L24 41 9.2 32.6V15.4Z" fill="none" stroke="#c8aa6e" stroke-width=".7" opacity=".35"/><path d="M12 34 36 14M12 14l24 20" stroke="#c8aa6e" stroke-width="1" opacity=".22"/><path d="M24 12.5 32.8 24 24 35.5 15.2 24Z" fill="#0ac8b9" fill-opacity=".14" stroke="#0ac8b9" stroke-width="1"/><path d="M24 17.2 28.3 24 24 30.8 19.7 24Z" fill="#0ac8b9"/><path d="M24 17.2 28.3 24H19.7Z" fill="#f0e6d2" opacity=".7"/></svg><svg class="wm" viewBox="-11 0 756 100" aria-hidden="true" focusable="false"><use href="#wordmark"/></svg></a>
+<p class="disclaimer">loloffmeta isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.</p>
 </div></footer>
 
 <script>
@@ -3013,15 +3030,37 @@ footer .brand .logo{width:24px;height:24px}
     var luckSlot = luck.querySelector('.luck-slot');
     var luckStatus = luck.querySelector('.luck-status');
     var luckTag = luck.querySelector('.luck-tag');
+    var luckChips = Array.prototype.slice.call(luck.querySelectorAll('[data-luck-role]'));
     var pool = cards.concat(Array.prototype.slice.call(document.querySelectorAll('#watch .card')));
+    var luckRole = 'all';
     var lastPick = null;
 
+    function setLuckRole(next) {
+      luckRole = next;
+      luckChips.forEach(function (chip) {
+        var on = chip.getAttribute('data-luck-role') === next;
+        chip.classList.toggle('is-on', on);
+        chip.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+    }
+
     function rollLuck() {
-      if (!pool.length) return;
-      var pick = pool[Math.floor(Math.random() * pool.length)];
+      var candidates = pool.filter(function (card) {
+        return luckRole === 'all' || card.getAttribute('data-role') === luckRole;
+      });
+      luck.hidden = false;
+      luckBtn.setAttribute('aria-expanded', 'true');
+      if (!candidates.length) {
+        luckSlot.innerHTML = '<p class="luck-none">No ' + luckRole + ' picks to roll just yet.</p>';
+        luckStatus.textContent = 'Nothing in ' + luckRole + ' yet. Try another lane.';
+        luckTag.textContent = '';
+        luckTag.classList.remove('is-watch');
+        return;
+      }
+      var pick = candidates[Math.floor(Math.random() * candidates.length)];
       var guard = 0;
-      while (pool.length > 1 && pick === lastPick && guard++ < 20) {
-        pick = pool[Math.floor(Math.random() * pool.length)];
+      while (candidates.length > 1 && pick === lastPick && guard++ < 20) {
+        pick = candidates[Math.floor(Math.random() * candidates.length)];
       }
       lastPick = pick;
       var clone = pick.cloneNode(true);
@@ -3030,14 +3069,12 @@ footer .brand .logo{width:24px;height:24px}
       luckSlot.innerHTML = '';
       luckSlot.appendChild(clone);
       var name = pick.getAttribute('data-champ');
-      var role = pick.getAttribute('data-role');
+      var pickRole = pick.getAttribute('data-role');
       var wr = parseFloat(pick.getAttribute('data-wr')) * 100;
       var isWatch = !!pick.closest('#watch');
-      luckStatus.textContent = name + ' · ' + role + ' · ' + wr.toFixed(1) + '% win rate';
+      luckStatus.textContent = name + ' · ' + pickRole + ' · ' + wr.toFixed(1) + '% win rate';
       luckTag.textContent = isWatch ? 'Watch list' : 'Off-role pick';
       luckTag.classList.toggle('is-watch', isWatch);
-      luck.hidden = false;
-      luckBtn.setAttribute('aria-expanded', 'true');
       luck.scrollIntoView({block: 'nearest', behavior: 'smooth'});
     }
 
@@ -3046,7 +3083,16 @@ footer .brand .logo{width:24px;height:24px}
       luckBtn.setAttribute('aria-expanded', 'false');
     }
 
-    luckBtn.addEventListener('click', rollLuck);
+    luckBtn.addEventListener('click', function () {
+      if (luck.hidden && role !== 'all') setLuckRole(role);
+      rollLuck();
+    });
+    luckChips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        setLuckRole(chip.getAttribute('data-luck-role'));
+        rollLuck();
+      });
+    });
     luck.querySelector('.luck-again').addEventListener('click', rollLuck);
     luck.querySelector('.luck-close').addEventListener('click', closeLuck);
   }
