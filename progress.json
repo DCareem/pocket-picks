@@ -1,60 +1,60 @@
 {
- "patch": "16.19",
- "generated": "2026-10-06 10:14 UTC",
- "generated_ts": 1791281648,
+ "patch": "16.21",
+ "generated": "2026-11-02 21:25 UTC",
+ "generated_ts": 1793654742,
  "total": {
-  "collected": 1353430,
-  "estimated": 2978953,
-  "share": 0.45433076654784416
+  "collected": 566562,
+  "estimated": 3165801,
+  "share": 0.17896323868746014
  },
  "regions": [
   {
    "platform": "kr",
    "name": "Korea",
-   "collected": 530394,
-   "estimated": 818072,
-   "share": 0.6483465842089051,
-   "games_per_hour": 2658
+   "collected": 224913,
+   "estimated": 817835,
+   "share": 0.27501001708116823,
+   "games_per_hour": 3028
   },
   {
    "platform": "euw1",
    "name": "EU West",
-   "collected": 284922,
-   "estimated": 966167,
-   "share": 0.2948995096671915,
-   "games_per_hour": 3132
-  },
-  {
-   "platform": "na1",
-   "name": "North America",
-   "collected": 137728,
-   "estimated": 418400,
-   "share": 0.3291767561841634,
-   "games_per_hour": 1364
+   "collected": 115240,
+   "estimated": 1016338,
+   "share": 0.11338698470321593,
+   "games_per_hour": 3663
   },
   {
    "platform": "vn2",
    "name": "Vietnam",
-   "collected": 137105,
-   "estimated": 384198,
-   "share": 0.3568595695946766,
-   "games_per_hour": 1254
+   "collected": 60230,
+   "estimated": 452740,
+   "share": 0.13303343345210436,
+   "games_per_hour": 1542
   },
   {
    "platform": "br1",
    "name": "Brazil",
-   "collected": 135526,
-   "estimated": 340984,
-   "share": 0.39745449467373917,
-   "games_per_hour": 1107
+   "collected": 55755,
+   "estimated": 416965,
+   "share": 0.13371667085781744,
+   "games_per_hour": 1448
+  },
+  {
+   "platform": "na1",
+   "name": "North America",
+   "collected": 58192,
+   "estimated": 401182,
+   "share": 0.14505146370990515,
+   "games_per_hour": 1584
   },
   {
    "platform": "oc1",
    "name": "Oceania",
-   "collected": 127755,
-   "estimated": 51132,
-   "share": 1.0,
-   "games_per_hour": 167
+   "collected": 52232,
+   "estimated": 60741,
+   "share": 0.8599175529047329,
+   "games_per_hour": 197
   }
  ]
 }
