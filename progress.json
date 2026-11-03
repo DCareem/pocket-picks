@@ -1,60 +1,60 @@
 {
  "patch": "16.21",
- "generated": "2026-11-02 21:25 UTC",
- "generated_ts": 1793654742,
+ "generated": "2026-11-03 17:15 UTC",
+ "generated_ts": 1793726129,
  "total": {
-  "collected": 566562,
-  "estimated": 3165801,
-  "share": 0.17896323868746014
+  "collected": 755238,
+  "estimated": 3325779,
+  "share": 0.22708604510401925
  },
  "regions": [
   {
    "platform": "kr",
    "name": "Korea",
-   "collected": 224913,
-   "estimated": 817835,
-   "share": 0.27501001708116823,
-   "games_per_hour": 3028
+   "collected": 298510,
+   "estimated": 836306,
+   "share": 0.3569380594431115,
+   "games_per_hour": 2879
   },
   {
    "platform": "euw1",
    "name": "EU West",
-   "collected": 115240,
-   "estimated": 1016338,
-   "share": 0.11338698470321593,
-   "games_per_hour": 3663
-  },
-  {
-   "platform": "vn2",
-   "name": "Vietnam",
-   "collected": 60230,
-   "estimated": 452740,
-   "share": 0.13303343345210436,
-   "games_per_hour": 1542
+   "collected": 156209,
+   "estimated": 1085658,
+   "share": 0.14388444810422815,
+   "games_per_hour": 3652
   },
   {
    "platform": "br1",
    "name": "Brazil",
-   "collected": 55755,
-   "estimated": 416965,
-   "share": 0.13371667085781744,
-   "games_per_hour": 1448
+   "collected": 73555,
+   "estimated": 464079,
+   "share": 0.1584964609677707,
+   "games_per_hour": 1507
+  },
+  {
+   "platform": "vn2",
+   "name": "Vietnam",
+   "collected": 80138,
+   "estimated": 450856,
+   "share": 0.17774529097417383,
+   "games_per_hour": 1437
   },
   {
    "platform": "na1",
    "name": "North America",
-   "collected": 58192,
-   "estimated": 401182,
-   "share": 0.14505146370990515,
-   "games_per_hour": 1584
+   "collected": 76523,
+   "estimated": 425861,
+   "share": 0.1796894413292244,
+   "games_per_hour": 1558
   },
   {
    "platform": "oc1",
    "name": "Oceania",
-   "collected": 52232,
-   "estimated": 60741,
-   "share": 0.8599175529047329,
-   "games_per_hour": 197
+   "collected": 70303,
+   "estimated": 63019,
+   "share": 1.0,
+   "games_per_hour": 191
   }
  ]
 }
