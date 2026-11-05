@@ -1,60 +1,60 @@
 {
  "patch": "16.22",
- "generated": "2026-11-04 22:43 UTC",
- "generated_ts": 1793832232,
+ "generated": "2026-11-05 16:45 UTC",
+ "generated_ts": 1793897115,
  "total": {
-  "collected": 51225,
-  "estimated": 195809,
-  "share": 0.26160697414317013
+  "collected": 131158,
+  "estimated": 356669,
+  "share": 0.36773030456810096
  },
  "regions": [
   {
    "platform": "kr",
    "name": "Korea",
-   "collected": 24079,
-   "estimated": 72675,
-   "share": 0.3313225198316256,
-   "games_per_hour": 3039
+   "collected": 32937,
+   "estimated": 96546,
+   "share": 0.3411564338041424,
+   "games_per_hour": 2302
   },
   {
    "platform": "euw1",
    "name": "EU West",
-   "collected": 9445,
-   "estimated": 56505,
-   "share": 0.16715065039842766,
-   "games_per_hour": 3503
+   "collected": 34430,
+   "estimated": 117688,
+   "share": 0.2925533226817355,
+   "games_per_hour": 3446
   },
   {
    "platform": "vn2",
    "name": "Vietnam",
-   "collected": 9280,
-   "estimated": 29067,
-   "share": 0.3192757749562767,
-   "games_per_hour": 1295
-  },
-  {
-   "platform": "br1",
-   "name": "Brazil",
-   "collected": 2798,
-   "estimated": 18441,
-   "share": 0.15173542463643871,
-   "games_per_hour": 1246
+   "collected": 29222,
+   "estimated": 54273,
+   "share": 0.5384318842951856,
+   "games_per_hour": 1341
   },
   {
    "platform": "na1",
    "name": "North America",
-   "collected": 1917,
-   "estimated": 15212,
-   "share": 0.12604237840756605,
-   "games_per_hour": 1451
+   "collected": 13462,
+   "estimated": 40966,
+   "share": 0.3286139710750976,
+   "games_per_hour": 1433
+  },
+  {
+   "platform": "br1",
+   "name": "Brazil",
+   "collected": 14067,
+   "estimated": 39955,
+   "share": 0.35207275441264096,
+   "games_per_hour": 1215
   },
   {
    "platform": "oc1",
    "name": "Oceania",
-   "collected": 3706,
-   "estimated": 3909,
-   "share": 0.948128361292314,
-   "games_per_hour": 148
+   "collected": 7040,
+   "estimated": 7241,
+   "share": 0.9722667675193716,
+   "games_per_hour": 163
   }
  ]
 }
