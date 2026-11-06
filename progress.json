@@ -1,60 +1,60 @@
 {
  "patch": "16.22",
- "generated": "2026-11-05 21:45 UTC",
- "generated_ts": 1793915138,
+ "generated": "2026-11-06 14:47 UTC",
+ "generated_ts": 1793976420,
  "total": {
-  "collected": 157851,
-  "estimated": 400424,
-  "share": 0.394209637783949
+  "collected": 254231,
+  "estimated": 586368,
+  "share": 0.4335690215018555
  },
  "regions": [
   {
    "platform": "kr",
    "name": "Korea",
-   "collected": 36743,
-   "estimated": 103998,
-   "share": 0.3533063390983621,
-   "games_per_hour": 2216
+   "collected": 50204,
+   "estimated": 163117,
+   "share": 0.30777932792917406,
+   "games_per_hour": 2550
   },
   {
    "platform": "euw1",
    "name": "EU West",
-   "collected": 42769,
-   "estimated": 133386,
-   "share": 0.3206431136491703,
-   "games_per_hour": 3406
+   "collected": 72272,
+   "estimated": 190624,
+   "share": 0.3791356364387051,
+   "games_per_hour": 3393
   },
   {
    "platform": "vn2",
    "name": "Vietnam",
-   "collected": 35632,
-   "estimated": 60968,
-   "share": 0.5844412767042291,
-   "games_per_hour": 1340
+   "collected": 56378,
+   "estimated": 83921,
+   "share": 0.6718042306626478,
+   "games_per_hour": 1342
   },
   {
    "platform": "na1",
    "name": "North America",
-   "collected": 17375,
-   "estimated": 48213,
-   "share": 0.360373392987006,
-   "games_per_hour": 1433
+   "collected": 32721,
+   "estimated": 72864,
+   "share": 0.44906435807133976,
+   "games_per_hour": 1438
   },
   {
    "platform": "br1",
    "name": "Brazil",
-   "collected": 17889,
-   "estimated": 45302,
-   "share": 0.3948910652784837,
-   "games_per_hour": 1195
+   "collected": 32084,
+   "estimated": 64849,
+   "share": 0.49474516450441036,
+   "games_per_hour": 1181
   },
   {
    "platform": "oc1",
    "name": "Oceania",
-   "collected": 7443,
-   "estimated": 8557,
-   "share": 0.8698036973391885,
-   "games_per_hour": 173
+   "collected": 10572,
+   "estimated": 10993,
+   "share": 0.9616856645982715,
+   "games_per_hour": 165
   }
  ]
 }
